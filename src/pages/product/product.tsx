@@ -24,31 +24,37 @@ export const Product = () => {
         <h1>{product.title}</h1>
         <div className={styles.field}>
           <strong>BRAND: </strong>
-          {product.brand}
+          {product.brand ? product.brand : "-"}
         </div>
         <div className={styles.rating}>
           <Star />
-          {product.rating}
+          {product.rating ? product.rating : "-"}
         </div>
         <p>{product.description}</p>
         <div className={styles.price}>
           {product.price}$
-          <span className={styles.discount}>
-            -{product.discountPercentage}%
-          </span>
+          {product.discountPercentage && (
+            <span className={styles.discount}>
+              -{product.discountPercentage}%
+            </span>
+          )}
         </div>
-        <div className={styles.category}>{product.category}</div>
+        <div className={styles.category}>
+          {product.category ? product.category : "-"}
+        </div>
         <div className={styles.field}>
           <strong>TAGS: </strong>
-          {product.tags.map((tag) => (
-            <span className={styles.tag} key={tag}>
-              {tag}
-            </span>
-          ))}
+          {product.tags
+            ? product.tags.map((tag) => (
+                <span className={styles.tag} key={tag}>
+                  {tag}
+                </span>
+              ))
+            : "-"}
         </div>
         <div className={styles.field}>
           <strong>SKU: </strong>
-          {product.sku}
+          {product.sku ? product.sku : "-"}
         </div>
       </div>
     </div>
