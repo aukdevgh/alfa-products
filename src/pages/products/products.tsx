@@ -16,10 +16,8 @@ export const Products = () => {
 
       <ul className={styles.list}>
         {products.map((product) => (
-          <li>
-            <Link to={`${product.id}`}>
-              <PorductCard key={product.id} product={product} />
-            </Link>
+          <li key={product.id}>
+            <PorductCard key={product.id} product={product} />
           </li>
         ))}
       </ul>
