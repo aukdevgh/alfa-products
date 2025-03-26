@@ -4,7 +4,9 @@ import { Product } from "../../types/product";
 export const fetchProducts = createAsyncThunk(
   "products/fetchProducts",
   async () => {
-    const response = await fetch("https://dummyjson.com/products");
+    const response = await fetch(
+      "https://dummyjson.com/products?select=title,description,price,discountPercentage,rating,thumbnail,category,tags,brand,sku"
+    );
     const data = await response.json();
     return data.products;
   }

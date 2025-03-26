@@ -24,12 +24,14 @@ export const PorductCard = ({ product }: { product: Product }) => {
           [styles.isLiked]: product.liked,
         })}
         onClick={handelLiked}
+        aria-label="like"
       >
         <Like />
       </button>
       <button
         className={clsx(styles.btn, styles.delete)}
         onClick={handeldelete}
+        aria-label="delete"
       >
         <Delete />
       </button>

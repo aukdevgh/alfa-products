@@ -3,8 +3,12 @@ export type Product = {
   title: string;
   description: string;
   price: number;
+  discountPercentage: number;
   rating: number;
   thumbnail: string;
-  images: string[];
+  category: string;
+  tags: string[];
+  brand: string;
+  sku: string;
   liked?: boolean;
 };
