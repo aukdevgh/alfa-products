@@ -1,0 +1,45 @@
+.form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 1px solid #c6c6ca;
+  border-radius: 2rem;
+}
+
+.textarea {
+  height: 180px;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: #000;
+  background-color: #f8f4f4;
+  border: 1px solid #c6c6ca;
+  border-radius: 0.5rem;
+  outline: none;
+  overflow-y: auto;
+  resize: none;
+
+  &:focus,
+  &:hover {
+    border-color: #646cff;
+  }
+}
+
+.submit {
+  margin-top: 2rem;
+  color: #000;
+  text-transform: uppercase;
+  background-color: #f8f4f4;
+  border: 1px solid #c6c6ca;
+  border-radius: 0.5rem;
+
+  &:focus,
+  &:hover {
+    background-color: #dddde2;
+    border-color: #646cff;
+    color: #646cff;
+  }
+}

@@ -18,7 +18,7 @@ export const Skeleton = (props: SkeletonProps) => {
 
   return (
     <div
-      className={clsx(styles.skeleton, ...className)}
+      className={clsx(styles.skeleton, className)}
       style={style}
       {...otherProps}
     />
